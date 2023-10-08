@@ -10,7 +10,7 @@ r="\033[0m"
 clear
 
 paketyukle() {
-echo -e $k">"$r" paket dipasang: "$y"termux-api"$r
+echo -e $k">"$r" memasang paket: "$y"termux-api"$r
 sleep 10
 pkg install termux-api
 termux-setup-storage > /dev/null 2>&1 &
@@ -24,10 +24,10 @@ clear
 
 read -p "Mulai Black-kit? (Y/N): " choice
 
-if [[ "$choice" == "E" || "$choice" == "e" ]]; then
+if [[ "$choice" == "Y" || "$choice" == "y" ]]; then
   echo "Black-kit dimula..."
-elif [[ "$choice" == "H" || "$choice" == "h" ]]; then
-  echo "Itu dibatalkan."
+elif [[ "$choice" == "N" || "$choice" == "n" ]]; then
+  echo "Black-kit Dibatalkan."
   exit 0
 else
   echo "Opsi tidak valid: $choice"
@@ -49,7 +49,7 @@ animate_progress() {
 
 clear
 
-echo -e "\e[1mMemulai transaksi...\e[0m"
+echo -e "\e[1mMemulai sistem...\e[0m"
 sleep 0.6
 clear
 
@@ -58,7 +58,7 @@ for ((i = 0; i <= 100; i += 5)); do
   sleep 0.1
 done
 
-echo -e "\n\e[1mTransaksi selesai.\e[0m"
+echo -e "\n\e[1mSistem selesai.\e[0m"
 sleep 0.6
 clear
 
@@ -104,69 +104,69 @@ case $islem_numarasi in
     cd $HOME
     git clone https://github.com/Mebus/cupp
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   02)
     cd $HOME
     git clone https://github.com/keralahacker/Ig-brute
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   03)
     cd $HOME
     git clone https://github.com/rajkumardusad/IP-Tracer.git
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   04)
     cd $HOME
     git clone https://github.com/sullo/nikto
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
    05)
     cd $HOME
     git clone https://github.com/sqlmapproject/sqlmap.git
 sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   06)
     cd $HOME
     git clone https://github.com/abhinavkavuri/PhoneInfoga                                                                                       sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   07)
     cd $HOME
     git clone https://github.com/termuxprofessor/parrotshell
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   08)
     cd $HOME
     git clone https://github.com/RazorKenway/GalleryHack
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   09)
     cd $HOME
     git clone https://github.com/RazorKenway/WhatsappSPAM
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   10)
     cd $HOME
     git clone https://github.com/WalderlanSena/ftpbrute
     sleep 2
-    termux-notification -t "Alat siap digunakan"
+    termux-notification -t "Tools siap digunakan"
     clear
     ;;
   h)
