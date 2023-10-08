@@ -1,0 +1,199 @@
+#!/bin/bash
+
+k="\033[0;31m"
+y="\033[0;32m"
+m="\033[0;34m"
+m="\033[0;35m"
+c="\033[1;36m"                                                                                                                               s="\033[0;33m"
+r="\033[0m"
+
+clear
+
+paketyukle() {
+echo -e $k">"$r" paket diunggah: "$y"termux-api"$r
+sleep 10
+pkg install termux-api
+termux-setup-storage > /dev/null 2>&1 &
+termux-toast -b red -c yellow "Termux API sudah terpasang."
+sleep 2
+}
+
+paketyukle
+
+clear
+
+read -p "Mulai Black-kit? (E/H): " choice
+
+if [[ "$choice" == "E" || "$choice" == "e" ]]; then
+  echo "Black-kit dimula..."
+elif [[ "$choice" == "H" || "$choice" == "h" ]]; then
+  echo "Itu dibatalkan."
+  exit 0
+else
+  echo "Opsi tidak valid: $choice"
+  exit 1
+fi
+
+clear
+
+animate_progress() {
+  local width=20
+  local progress=$1
+  local filled=$((progress * width / 100))
+  local empty=$((width - filled))
+  local bar=$(printf "%${filled}s")
+  local space=$(printf "%${empty}s")
+  local color=$2
+  echo -ne "\rHarap tunggu...[\e[32m${bar// /#}\e[0m\e[37m${space// / }\e[0m] ${progress}%"
+}
+
+clear
+
+echo -e "\e[1mMemulai transaksi...\e[0m"
+sleep 0.6
+clear
+
+for ((i = 0; i <= 100; i += 5)); do
+  animate_progress $i
+  sleep 0.1
+done
+
+echo -e "\n\e[1mTransaksi selesai.\e[0m"
+sleep 0.6
+clear
+
+while true; do
+  banner=$(cat << "EOF"
+        ███                  █                      █
+ █████░   █                  █             █   ▒▓          █
+ █   ▒█   █                  █             █  ▒█           █
+ █    █   █    ░███░   ▓██▒  █  ▒█         █ ▒█   ███    █████
+ █   ▒█   █    █▒ ▒█  ▓█  ▓  █ ▒█          █▒█      █      █
+ █████░   █        █  █░     █▒█           ███░     █      █
+ █   ▒█   █    ▒████  █      ██▓           █ ▒█     █      █
+ █    █   █    █▒  █  █░     █░█░          █  █▓    █      █
+ █   ▒█   █░   █░ ▓█  ▓█  ▓  █ ░█          █   █░   █      █░
+ █████░   ▒██  ▒██▒█   ▓██▒  █  ▒█         █   ▒█ █████    ▒██
+\e[31m•\e[33mInstagram\e[31m•\e[37mANKEALcode
+\e[31m•\e[33mGithub\e[31m•\e[37mANKEALcode
+\e[31m•\e[33mversion\e[31m•\e[37m1.0
+EOF
+
+echo
+echo -e "\e[31m(\e[32m01\e[31m)\e[36m" Cupp
+echo -e "\e[31m(\e[32m02\e[31m)\e[36m" Instagram-Brute
+echo -e "\e[31m(\e[32m03\e[31m)\e[36m" Ip-Tracer
+echo -e "\e[31m(\e[32m04\e[31m)\e[36m" Nikto
+echo -e "\e[31m(\e[32m05\e[31m)\e[36m" Sqlmap
+echo -e "\e[31m(\e[32m06\e[31m)\e[36m" Phoneİnfoga
+echo -e "\e[31m(\e[32m07\e[31m)\e[36m" ParrotShell
+echo -e "\e[31m(\e[32m08\e[31m)\e[36m" GalleryHack
+echo -e "\e[31m(\e[32m09\e[31m)\e[36m" WhatsApp Spam
+echo -e "\e[31m(\e[32m10\e[31m)\e[36m" FTP Brute
+echo -e "\e[31m(\e[32mh\e[31m)\e[36m" Batal
+echo -e "\e[31m(\e[32m99\e[31m)\e[36m" Exit
+echo
+)
+
+echo -e "\e[1;32m$banner\e[0m"
+
+read -p $'\e[31m[\e[32m=>\e[31m]\e[37m Pilih Nomor : ' islem_numarasi
+
+case $islem_numarasi in
+  01)
+    cd $HOME
+    git clone https://github.com/Mebus/cupp
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  02)
+    cd $HOME
+    git clone https://github.com/keralahacker/Ig-brute
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  03)
+    cd $HOME
+    git clone https://github.com/rajkumardusad/IP-Tracer.git
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  04)
+    cd $HOME
+    git clone https://github.com/sullo/nikto
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+   05)
+    cd $HOME
+    git clone https://github.com/sqlmapproject/sqlmap.git
+sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  06)
+    cd $HOME
+    git clone https://github.com/abhinavkavuri/PhoneInfoga                                                                                       sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  07)
+    cd $HOME
+    git clone https://github.com/termuxprofessor/parrotshell
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  08)
+    cd $HOME
+    git clone https://github.com/RazorKenway/GalleryHack
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  09)
+    cd $HOME
+    git clone https://github.com/RazorKenway/WhatsappSPAM
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  10)
+    cd $HOME
+    git clone https://github.com/WalderlanSena/ftpbrute
+    sleep 2
+    termux-notification -t "Alat siap digunakan"
+    clear
+    ;;
+  h)
+    echo "Menu bantuan."
+    sleep 0.4
+    echo "Cupp: Ini adalah alat yang dirancang untuk serangan brute force kata sandi."
+    echo "Instagram-Brute: Ini digunakan untuk melakukan serangan brute force kata sandi pada akun Instagram."
+    echo "Ip-Tracer: Ini digunakan untuk menentukan lokasi geografis, pemilik, dan detail lain dari alamat IP tertentu."
+    echo "Nikto: Digunakan untuk mendeteksi kerentanan web server."
+    echo "Sqlmap: Digunakan untuk mendeteksi dan mengeksploitasi kerentanan injeksi SQL."
+    echo "PhoneInfoga: Digunakan untuk mengumpulkan informasi tentang nomor telepon."
+    echo "ParrotShell: Digunakan untuk membuat beberapa sesi shell."
+    echo "GalleryHack: Digunakan untuk mengunduh galeri gambar dari situs web."
+    echo "WhatsApp Spam: Digunakan untuk mengirim pesan spam ke nomor WhatsApp tertentu."
+    echo "FTP Brute: Melakukan serangan brute force kata sandi pada server FTP."
+    read -p "Tekan ENTER untuk melanjutkan."
+    clear
+    ;;
+    99)
+    echo "Keluar dari Black-Kit..."
+    sleep 0.4
+    exit 0
+    ;;
+    *)
+      echo "Pilihan tidak valid: $islem_numarasi"
+      read -p "Tekan ENTER untuk melanjutkan."
+      clear
+      ;;
+  esac
+done
