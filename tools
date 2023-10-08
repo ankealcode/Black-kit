@@ -10,7 +10,7 @@ r="\033[0m"
 clear
 
 paketyukle() {
-echo -e $k">"$r" paket diunggah: "$y"termux-api"$r
+echo -e $k">"$r" paket dipasang: "$y"termux-api"$r
 sleep 10
 pkg install termux-api
 termux-setup-storage > /dev/null 2>&1 &
@@ -22,7 +22,7 @@ paketyukle
 
 clear
 
-read -p "Mulai Black-kit? (E/H): " choice
+read -p "Mulai Black-kit? (Y/N): " choice
 
 if [[ "$choice" == "E" || "$choice" == "e" ]]; then
   echo "Black-kit dimula..."
@@ -90,7 +90,7 @@ echo -e "\e[31m(\e[32m07\e[31m)\e[36m" ParrotShell
 echo -e "\e[31m(\e[32m08\e[31m)\e[36m" GalleryHack
 echo -e "\e[31m(\e[32m09\e[31m)\e[36m" WhatsApp Spam
 echo -e "\e[31m(\e[32m10\e[31m)\e[36m" FTP Brute
-echo -e "\e[31m(\e[32mh\e[31m)\e[36m" Batal
+echo -e "\e[31m(\e[32mh\e[31m)\e[36m" Help
 echo -e "\e[31m(\e[32m99\e[31m)\e[36m" Exit
 echo
 )
